@@ -41,7 +41,7 @@
 
 * [SDKs](getting-started/sdks.md)
 * [Subgraph data (GraphQL)](getting-started/using-graphql.md)
-* [Data API](https://aave-api-v2.aave.com)
+* [Data API](https://aave-api-v2.aave.com/)
 * [Gas Limits](getting-started/gas-limits.md)
 
 ## Guides

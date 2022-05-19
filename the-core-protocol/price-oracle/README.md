@@ -6,8 +6,7 @@ Throughout the Aave Protocol, we require reliable, up to date, and secure price 
 {% tab title="Aave market" %}
 1. First checking for a price from a Chainlink aggregator.
 2. If the price is below or equal to zero, we call our [fallback price oracle.](./#getfallbackoracle)​
-   1. The fallback price oracle is currently maintained by the Aave team.
-3. In the future, Aave governance mechanisms will manage the selection of sources and the fallback price oracle.
+   1. In the future, Aave governance mechanisms will manage the selection of sources and the fallback price oracle.
 {% endtab %}
 {% endtabs %}
 
