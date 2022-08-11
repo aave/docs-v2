@@ -60,6 +60,7 @@ Returns the address of the fallback oracle.
 
 <details>
 <summary>Price Oracle ABIs</summary>
+
 {% tabs %}
 {% tab title="Ethereum" %}
 ```

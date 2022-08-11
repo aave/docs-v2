@@ -30,6 +30,7 @@ Returns the ID of an [`LendingPoolAddressesProvider`](../addresses-provider/)
 
 <details>
 <summary>Addresses Provider Registry</summary>
+
 ```
 [
     {

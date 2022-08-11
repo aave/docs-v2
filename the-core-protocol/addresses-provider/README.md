@@ -112,6 +112,7 @@ For example, the [Protocol Data Provider](../protocol-data-provider/) uses the i
 
 <details>
 <summary>Addresses Provider ABI</summary>
+
 ```
 [
     {

@@ -116,6 +116,7 @@ Returns the associated addresses for an `asset`
 
 <details>
 <summary>Protocol Data Provider ABI</summary>
+
 ```
 [
     {
