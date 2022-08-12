@@ -193,22 +193,27 @@ There is no change to the borrower's available credit after repayment.
 // Import relevant interfaces
 import './IAddressesProvider.sol';
 import './ILendingPool.sol';
+import './IERC20.sol';
 
 // ... beginning of your contract. Constructors etc...
 
 // Within a relevant function in your contract:
 
-    // Get the latest LendingPool contract for the relevant market
-    IAddressesProvider provider = IAddressesProvider(address(INSERT_ADDRESSES_PROVIDER_ADDRESS));
-    ILendingPool lendingPool = ILendingPool(provider.getLendingPool());
-    
-    // Repay the relevant amount
-    address assetToRepay = address(INSERT_ASSET_ADDRESS); // E.g. the address for Dai
-    uint256 amountToRepayInWei = INSERT_AMOUNT; // must be equal to or less than the amount delegated to the borrower=
-    uint256 interestRateMode = INSERT_INTEREST_RATE_MODE; // must be of the same type as the debt token that is delegated. I.e. stable = 1, variable = 2.
-    address delegatorAddress = INSERT_DELEGATOR_ADDRESS;
-    
-    lendingPool.repay(assetToRepay, amountToRepayInWei, interestRateMode, delegatorAddress);
+// Get the latest LendingPool contract for the relevant market
+IAddressesProvider provider = IAddressesProvider(address(INSERT_ADDRESSES_PROVIDER_ADDRESS));
+ILendingPool lendingPool = ILendingPool(provider.getLendingPool());
+
+// Approve the asset to be repaid  
+address assetToRepay = address(INSERT_ASSET_ADDRESS); // E.g. the address for Dai
+uint256 amountToRepayInWei = INSERT_AMOUNT; // must be equal to or less than the amount delegated to the borrower
+
+IERC20(assetToRepay).approve(address(lendingPool), amounToRepayInWei);
+
+// Repay the relevant amount
+uint256 interestRateMode = INSERT_INTEREST_RATE_MODE; // must be of the same type as the debt token that is delegated. I.e. stable = 1, variable = 2.
+address delegatorAddress = INSERT_DELEGATOR_ADDRESS;
+
+lendingPool.repay(assetToRepay, amountToRepayInWei, interestRateMode, delegatorAddress);
     
 ```
 {% endtab %}
@@ -216,38 +221,48 @@ import './ILendingPool.sol';
 {% tab title="Web3.js" %}
 ```javascript
 // Import relevant ABIs
-import IAddressProviderABI from './IAddressesProviderAbi.json'
+import IAddressProviderABI from './IaddressesProviderAbi.json'
 import ILendingPoolABI from './ILendingPool.json'
+import IERC20ABI from './IERC20.json'
 
 // ... beginning of your code
 
 // Within a relevant function in your code:
 
-    // Get the latest LendingPool contract for the relevant market
-    const provider = new web3.eth.Contract(IAddressProviderABI, INSERT_ADDRESSES_PROVIDER_ADDRESS)
-    const lendingPoolAddress = await provider.methods
-        .getLendingPool()
-        .call()
-        .catch((e) => {
-            throw Error(`Error getting lendingPool address: ${e.message}`)
-        })
-    const lendingPoolContract = new web3.eth.Contract(ILendingPoolABI, lendingPoolAddress)
-    
-    // Borrow the relevant amount
-    const assetToRepay = INSERT_ASSET_ADDRESS; // E.g. the address for Dai
-    const amountToRepayInWei = INSERT_AMOUNT; // must be equal to or less than the amount delegated to the borrower
-    const delegatorAddress = INSERT_DELEGATOR_ADDRESS;
-    
-    await lendingPoolContract.methods
-        .repay(
-            assetToRepay,
-            amountToRepayInWei,
-            delegatorAddress
-        )
-        .send()
-        .catch((e) => {
-            throw Error(`Error repaying: ${e.message}`)
-        })
+// Get the latest LendingPool contract for the relevant market
+const provider = new web3.eth.Contract(IAddressProviderABI, INSERT_ADDRESSES_PROVIDER_ADDRESS)
+const lendingPoolAddress = await provider.methods
+    .getLendingPool()
+    .call()
+    .catch((e) => {
+        throw Error(`Error getting lendingPool address: ${e.message}`)
+    })
+const lendingPoolContract = new web3.eth.Contract(ILendingPoolABI, lendingPoolAddress)
+
+const assetToRepay = INSERT_ASSET_ADDRESS; // E.g. the address for Dai
+const amountToRepayInWei = INSERT_AMOUNT; // must be equal to or less than the amount delegated to the borrower
+const delegatorAddress = INSERT_DELEGATOR_ADDRESS;
+
+// Approve the asset to be repaid
+const assetContract = new web3.eth.Contract(IERC20ABI, assetToRepay)
+await assetContract.methods
+  .approve(provider, amountToRepayInWei)
+  .send()
+  .catch((e) => {
+    throw Error(`Error approving asset allowance: ${e.message}`)
+  })
+
+const lendingPoolContract = new web3.eth.Contract(ILendingPoolABI, lendingPoolAddress)
+await lendingPoolContract.methods
+  .repay(
+			assetToRepay, 
+			amountToRepayInWei, 
+			delegatorAddress
+	)
+  .send()
+  .catch((e) => {
+    throw Error(`Error repaying: ${e.message}`)
+  })
 
 ```
 {% endtab %}
