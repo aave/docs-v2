@@ -59,7 +59,7 @@ For contract addresses of other markets, see the side bar under `Deployed Contra
 | UiIncentiveDataProvider                                                                                |                                                                                                                                     | [0xd9F1e5F70B14b8Fd577Df84be7D75afB8a3A0186](https://etherscan.io/address/0xd9F1e5F70B14b8Fd577Df84be7D75afB8a3A0186#code) | [ABI](http://api.etherscan.io/api?module=contract&action=getabi&address=0xd9F1e5F70B14b8Fd577Df84be7D75afB8a3A0186&format=raw) |
 {% endtab %}
 
-{% tab title="Kovan" %}
+{% tab title="Goerli" %}
 {% hint style="error" %}
 The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>
 {% endhint}
