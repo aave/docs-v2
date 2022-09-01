@@ -60,10 +60,6 @@ For contract addresses of other markets, see the side bar under `Deployed Contra
 {% endtab %}
 
 {% tab title="Goerli" %}
-{% hint style="error" %}
-The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>
-{% endhint}
-
 
 | Contracts                                                                                              | Code                                                                                                                             | Address                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -79,6 +75,25 @@ The Kovan network has been deprecated, and replaced with Goerli as the maintaine
 | UiPoolDataProvider                                                                                     | [Github](https://github.com/aave/protocol-v2/blob/master/contracts/misc/UiPoolDataProviderV2V3.sol)                                     | [0xcCb7a1B6B5D72c4AA633B114537cD20612fDccbB](https://goerli.etherscan.io/address/0xcCb7a1B6B5D72c4AA633B114537cD20612fDccbB#code) |
 | UiIncentivesDataProvider                                                                               | [Github](https://github.com/aave/protocol-v2/blob/master/contracts/misc/UiIncentiveDataProviderV2V3.sol)                                 | [0xA2E05bE2090b3658A264bdf1C39387f5Dba367Ec](https://goerli.etherscan.io/address/0xA2E05bE2090b3658A264bdf1C39387f5Dba367Ec#code) |
 {% endtab %}
+
+{% tab title="Kovan" %}
+{% hint style="error" %}
+The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+{% endhint}
+
+| Contracts                                                                                              | Code                                                                                                                             | Address                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [LendingPoolAddressesProvider](../the-core-protocol/addresses-provider/)                               | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/protocol/configuration/LendingPoolAddressesProvider.sol)         | [0x88757f2f99175387ab4c6a4b3067c77a695b0349](https://kovan.etherscan.io/address/0x88757f2f99175387ab4c6a4b3067c77a695b0349#readContract) |
+| [LendingPoolAddressesProviderRegistry](../the-core-protocol/addresses-provider-registry/)              | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/protocol/configuration/LendingPoolAddressesProviderRegistry.sol) | [0x1E40B561EC587036f9789aF83236f057D1ed2A90](https://kovan.etherscan.io/address/0x1E40B561EC587036f9789aF83236f057D1ed2A90#readContract) |
+| [LendingPool](../the-core-protocol/lendingpool/)                                                       | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/protocol/lendingpool/LendingPool.sol)                            | [0xE0fBa4Fc209b4948668006B2bE61711b7f465bAe](https://kovan.etherscan.io/address/0xe0fba4fc209b4948668006b2be61711b7f465bae)              |
+| [LendingPoolCollateralManager](../the-core-protocol/protocol-overview.md#lendingpoolcollateralmanager) | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/protocol/lendingpool/LendingPoolCollateralManager.sol)           | [0x9269b6453d0d75370c4c85e5a42977a53efdb72a](https://kovan.etherscan.io/address/0x9269b6453d0d75370c4c85e5a42977a53efdb72a)              |
+| [LendingPoolConfigurator](../the-core-protocol/protocol-overview.md#lending-pool-configurator)         | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/protocol/lendingpool/LendingPoolConfigurator.sol)                | [0x25d0106aab3f906f00c1e59716bb5f749db12cce](https://kovan.etherscan.io/address/0x25d0106aab3f906f00c1e59716bb5f749db12cce)              |
+| [LendingRateOracle](../the-core-protocol/protocol-overview.md#interest-rate-strategy)                  |                                                                                                                                  | [0xcde85937f4d447b1508943d6423f1011407f798b](https://kovan.etherscan.io/address/0xcde85937f4d447b1508943d6423f1011407f798b)              |
+| [Price Oracle](../the-core-protocol/price-oracle/)                                                     | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/misc/AaveOracle.sol)                                             | [0xb8be51e6563bb312cbb2aa26e352516c25c26ac1](https://kovan.etherscan.io/address/0xb8be51e6563bb312cbb2aa26e352516c25c26ac1)              |
+| [Pool Admin](../the-core-protocol/addresses-provider/#getpooladmin)                                    |                                                                                                                                  | [0x2012b02574f32a96b9cfb8ba7fdfd589d5c70f50](https://kovan.etherscan.io/address/0x2012b02574f32a96b9cfb8ba7fdfd589d5c70f50)              |
+| [Emergency Admin](../the-core-protocol/addresses-provider/#getpoolemergencyadmin)                      |                                                                                                                                  | [0xc6cfb8bca4691f661773facc64e47a4ebaed712f](https://kovan.etherscan.io/address/0xc6cfb8bca4691f661773facc64e47a4ebaed712f)              |
+| [ProtocolDataProvider](../the-core-protocol/protocol-data-provider/)                                   | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/misc/AaveProtocolDataProvider.sol)                               | [0x3c73A5E5785cAC854D468F727c606C07488a29D6](https://kovan.etherscan.io/address/0x3c73a5e5785cac854d468f727c606c07488a29d6#readContract) |
+| WETHGateway                                                                                            | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/misc/WETHGateway.sol)                                            | [0xA61ca04DF33B72b235a8A28CfB535bb7A5271B70](https://kovan.etherscan.io/address/0xA61ca04DF33B72b235a8A28CfB535bb7A5271B70#code)         |
 {% endtabs %}
 
 {% hint style="info" %}
@@ -135,7 +150,15 @@ Addresses are also available via [JSON here](https://aave.github.io/aave-address
 &#x20;\*\*\*: 8 decimals
 {% endtab %}
 
+{% tab title="Goerli" %}
+Coming soon
+{% endtab %}
+
 {% tab title="Kovan" %}
+{% hint style="error" %}
+The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+{% endhint}
+
 {% hint style="warning" %}
 For assets on testnets, we use different versions of the token (e.g. testnet Dai). This is to ensure enough liquidity for our reserves and to easily mint more tokens when needed.
 
@@ -144,6 +167,6 @@ If you are developing on a testnet and require tokens, go to [https://testnet.aa
 
 As testnet assets may change frequently, ensure you are using the right asset by minting from our testnet faucet (as mentioned above) and use the ProtocolDataProvider to fetch all the relevant assets using [`getReserveTokensAddresses`](../the-core-protocol/protocol-data-provider/#getreservetokensaddresses).
 
-For your convenience, **an up to date list of Kovan addresses is** [**available in JSON here**](https://aave.github.io/aave-addresses/kovan.json).
+A list of available Kovan assets is [**available in JSON here**](https://aave.github.io/aave-addresses/kovan.json).
 {% endtab %}
 {% endtabs %}
