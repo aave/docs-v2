@@ -17,12 +17,16 @@ The AMM market supports LP tokens from certain Automated Market Maker (AMM) dece
 | [EmergencyAdmin](https://docs.aave.com/developers/v/2.0/the-core-protocol/addresses-provider#getpoolemergencyadmin)                     |                                                                                                                             | [0xb9062896ec3a615a4e4444df183f0531a77218ae](https://etherscan.io/address/0xb9062896ec3a615a4e4444df183f0531a77218ae#code) | [ABI](http://api.etherscan.io/api?module=contract&action=getabi&address=0x34cfac646f301356faa8b21e94227e3583fe3f5f&format=raw) |
 | [Pool Admin](https://docs.aave.com/developers/v/2.0/the-core-protocol/addresses-provider#getpooladmin)                                  |                                                                                                                             | [0xee56e2b3d491590b5b31738cc34d5232f378a8d5](https://etherscan.io/address/0xee56e2b3d491590b5b31738cc34d5232f378a8d5#code) | [ABI](http://api.etherscan.io/api?module=contract&action=getabi&address=0xee56e2b3d491590b5b31738cc34d5232f378a8d5&format=raw) |
 | [AaveCollector](https://docs.aave.com/risk/asset-risk/risk-parameters#reserve-factor)                                                   |                                                                                                                             | [0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c](https://etherscan.io/address/0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c#code) | [ABI](http://api.etherscan.io/api?module=contract&action=getabi&address=0x1aa435ed226014407fa6b889e9d06c02b1a12af3&format=raw) |
+| UiPoolDataProvider                                                                                     | [Github](https://github.com/aave/protocol-v2/blob/master/contracts/misc/UiPoolDataProviderV2V3.sol)                                        | [0x30375522F67a6308630d49A694ca1491fA2D3BC6](https://etherscan.io/address/0x30375522F67a6308630d49A694ca1491fA2D3BC6#code) | [ABI](http://api.etherscan.io/api?module=contract&action=getabi&address=0x30375522F67a6308630d49A694ca1491fA2D3BC6&format=raw) |
+| UiIncentiveDataProvider                                                                                | [Github](https://github.com/aave/protocol-v2/blob/master/contracts/misc/UiIncentiveDataProviderV2V3.sol)                                        | [0xD01ab9a6577E1D84F142e44D49380e23A340387d](https://etherscan.io/address/0xD01ab9a6577E1D84F142e44D49380e23A340387d#code) | [ABI](https://goerli.etherscan.io/address/0xA2E05bE2090b3658A264bdf1C39387f5Dba367Ec#code) |
 {% endtab %}
 
 {% tab title="Kovan" %}
-{% hint style="warning" %}
-Always ensure you are using the latest `LendingPool` address, since Kovan may be updated from time to time. You retrieve this by getting the latest [LendingPoolAddressesProvider](../the-core-protocol/addresses-provider-registry/#getaddressesproviderslist), then getting the latest [LendingPool](../the-core-protocol/addresses-provider/#getlendingpool) address.
-{% endhint %}
+{% hint style="error" %}
+The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan AMM market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+
+There is no deployment of the AMM Market to Goerli, but AMM assets can still be tested by adding them to a <a href="https://github.com/aave/aave-sandbox" target="_blank">sandbox</a> fork of the V2 Goerli Market.
+{% endhint}
 
 | Contracts                                                                                              | Code                                                                                                                                                   | Address                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,6 +85,11 @@ Addresses are also available via [JSON here](https://aave.github.io/aave-address
 {% endtab %}
 
 {% tab title="Kovan" %}
+{% hint style="error" %}
+The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan AMM market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+
+There is no deployment of the AMM Market to Goerli, but AMM assets can still be tested by adding them to a <a href="https://github.com/aave/aave-sandbox" target="_blank">sandbox</a> fork of the V2 Goerli Market.
+{% endhint}
 {% hint style="warning" %}
 For assets on testnets, we use different versions of the token (e.g. testnet Dai). This is to ensure enough liquidity for our reserves and to easily mint more tokens when needed.
 
@@ -89,6 +98,6 @@ If you are developing on a testnet and require tokens, go to [https://testnet.aa
 
 As testnet assets may change frequently, ensure you are using the right asset by minting from our testnet faucet (as mentioned above) and use the ProtocolDataProvider to fetch all the relevant assets using [`getReserveTokensAddresses`](../the-core-protocol/protocol-data-provider/#getreservetokensaddresses).
 
-For your convenience, **an up to date list of Kovan addresses is** [**available in JSON here**](https://aave.github.io/aave-addresses/kovan.json).
+A list of available assets on Kovan is [**available in JSON here**](https://aave.github.io/aave-addresses/kovan.json).
 {% endtab %}
 {% endtabs %}
