@@ -2,6 +2,12 @@
 
 The AMM market supports LP tokens from certain Automated Market Maker (AMM) decentralised exchanges, such as [Uniswap v2](https://app.uniswap.org/#/) and [Balancer](https://balancer.finance).
 
+{% hint style="error" %}
+The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan AMM market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+
+There is no deployment of the AMM Market to Goerli, but AMM assets can still be tested by adding them to a <a href="https://github.com/aave/aave-sandbox" target="_blank">sandbox</a> fork of the V2 Goerli Market.
+{% endhint}
+
 {% tabs %}
 {% tab title="Mainnet" %}
 | Contracts                                                                                                                               | Code                                                                                                                        | Address                                                                                                                    | ABI                                                                                                                            |
@@ -21,12 +27,8 @@ The AMM market supports LP tokens from certain Automated Market Maker (AMM) dece
 | UiIncentiveDataProvider                                                                                | [Github](https://github.com/aave/protocol-v2/blob/master/contracts/misc/UiIncentiveDataProviderV2V3.sol)                                        | [0xD01ab9a6577E1D84F142e44D49380e23A340387d](https://etherscan.io/address/0xD01ab9a6577E1D84F142e44D49380e23A340387d#code) | [ABI](https://goerli.etherscan.io/address/0xA2E05bE2090b3658A264bdf1C39387f5Dba367Ec#code) |
 {% endtab %}
 
-{% tab title="Kovan" %}
-{% hint style="error" %}
-The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan AMM market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+{% tab title="Kovan (deprecated, use Goerli)" %}
 
-There is no deployment of the AMM Market to Goerli, but AMM assets can still be tested by adding them to a <a href="https://github.com/aave/aave-sandbox" target="_blank">sandbox</a> fork of the V2 Goerli Market.
-{% endhint}
 
 | Contracts                                                                                              | Code                                                                                                                                                   | Address                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
