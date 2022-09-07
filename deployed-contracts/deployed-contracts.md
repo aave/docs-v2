@@ -38,6 +38,10 @@ The Aave protocol is an ecosystem of multiple markets, with the first market bei
 For contract addresses of other markets, see the side bar under `Deployed Contracts`
 {% endhint %}
 
+{% hint style="error" %}
+The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
+{% endhint}
+
 {% tabs %}
 {% tab title="Mainnet" %}
 | Contracts                                                                                              | Code                                                                                                                                | Address                                                                                                                    | ABI                                                                                                                            |
@@ -76,10 +80,8 @@ For contract addresses of other markets, see the side bar under `Deployed Contra
 | UiIncentivesDataProvider                                                                               | [Github](https://github.com/aave/protocol-v2/blob/master/contracts/misc/UiIncentiveDataProviderV2V3.sol)                                 | [0xA2E05bE2090b3658A264bdf1C39387f5Dba367Ec](https://goerli.etherscan.io/address/0xA2E05bE2090b3658A264bdf1C39387f5Dba367Ec#code) |
 {% endtab %}
 
-{% tab title="Kovan" %}
-{% hint style="error" %}
-The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
-{% endhint}
+{% tab title="Kovan (deprecated, use Goerli)" %}
+
 
 | Contracts                                                                                              | Code                                                                                                                             | Address                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
