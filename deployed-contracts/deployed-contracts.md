@@ -40,7 +40,7 @@ For contract addresses of other markets, see the side bar under `Deployed Contra
 
 {% hint style="danger" %}
 The Kovan network has been deprecated, and replaced with Goerli as the maintained testnet for Ethereum. The Kovan market can still be accessed via historical IPFS links of the <a href="https://github.com/aave/interface/releases/" target="_blank">Aave interface</a> such as these. <a href="https://bafybeibtdtncksffohn4kms7uwbdiolwmhy74fy2gj4vz3tfvb66sqn3jy.ipfs.dweb.link" target="_blank">Link 1</a> <a href="https://bafybeig6eh3afu4wc2ks4aw63u3vio6ncfoe2ic4wkpqq6xjla2pxo6axi.ipfs.dweb.link" target="_blank">Link 2</a>.
-{% endhint}
+{% endhint %}
 
 {% tabs %}
 {% tab title="Mainnet" %}
