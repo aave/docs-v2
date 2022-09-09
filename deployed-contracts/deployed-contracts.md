@@ -64,7 +64,6 @@ The Kovan network has been deprecated, and replaced with Goerli as the maintaine
 {% endtab %}
 
 {% tab title="Goerli" %}
-
 | Contracts                                                                                              | Code                                                                                                                             | Address                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [LendingPoolAddressesProvider](../the-core-protocol/addresses-provider/)                               | [Github](https://github.com/aave/protocol-v2/tree/main/contracts/protocol/configuration/LendingPoolAddressesProvider.sol)         | [0x5E52dEc931FFb32f609681B8438A51c675cc232d](https://goerli.etherscan.io/address/0x5E52dEc931FFb32f609681B8438A51c675cc232d#code) |
@@ -81,8 +80,6 @@ The Kovan network has been deprecated, and replaced with Goerli as the maintaine
 {% endtab %}
 
 {% tab title="Kovan (deprecated, use Goerli)" %}
-
-
 | Contracts                                                                                              | Code                                                                                                                             | Address                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [LendingPoolAddressesProvider](../the-core-protocol/addresses-provider/)                               | [Github](https://github.com/aave/protocol-v2/blob/1.0/contracts/protocol/configuration/LendingPoolAddressesProvider.sol)         | [0x88757f2f99175387ab4c6a4b3067c77a695b0349](https://kovan.etherscan.io/address/0x88757f2f99175387ab4c6a4b3067c77a695b0349#readContract) |
