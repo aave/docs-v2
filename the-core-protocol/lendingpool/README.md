@@ -51,7 +51,7 @@ When withdrawing `to`another address,**`msg.sender`**should have`aToken`that wil
 | `amount`       | uint256 | <p>amount deposited, expressed in wei units. <br>Use <code>type(uint).max</code> to withdraw the entire balance.</p> |
 | `to`           | address | address that will receive the `asset`                                                                                |
 
-### borrow**()**
+### **borrow()**
 
 **`function borrow(address asset, uint256 amount, uint256 interestRateMode, uint16 referralCode, address onBehalfOf)`**
 
@@ -67,7 +67,7 @@ Note: `onBehalfOf` must have enough collateral via [`deposit()`](./#deposit) or 
 | `referralCode`     | uint16  | referral code for our [referral program](broken-reference). Use 0 for no referral code.                                           |
 | `onBehalfOf`       | address | <p>address of user who will incur the debt.</p><p>Use <code>msg.sender</code> when not calling on behalf of a different user.</p> |
 
-### repay**()**
+### **repay()**
 
 **`function repay(address asset, uint256 amount, uint256 rateMode, address onBehalfOf)`**
 
@@ -80,7 +80,7 @@ Repays `onBehalfOf`'s debt `amount` of `asset` which has a `rateMode`.
 | `rateMode`     | uint256 | <p>the type of borrow debt.</p><p>Stable: 1, Variable: 2</p>                                                                                                                                                                                                                                                                                                   |
 | `onBehalfOf`   | address | <p>address of user who will incur the debt.</p><p>Use <code>msg.sender</code> when not calling on behalf of a different user.</p>                                                                                                                                                                                                                              |
 
-### swapBorrowRateMode**()**
+### **swapBorrowRateMode()**
 
 **`function swapBorrowRateMode(address asset, uint256 rateMode)`**
 
@@ -89,9 +89,9 @@ Swaps the `msg.sender`'s borrow rate modes between stable and variable.
 | Parameter Name | Type    | Description                                                                                        |
 | -------------- | ------- | -------------------------------------------------------------------------------------------------- |
 | `asset`        | address | address of the [underlying asset](../../deployed-contracts/deployed-contracts.md#supported-assets) |
-| `rateMode`     | uint256 | <p>the rate mode the user is swapping <strong>from</strong>.</p><p>Stable: 1, Variable: 2</p>      |
+| `rateMode`     | uint256 | <p>the rate mode the user is swapping <strong>to</strong>.</p><p>Stable: 1, Variable: 2</p>      |
 
-### setUserUseReserveAsCollateral**()**
+### **setUserUseReserveAsCollateral()**
 
 **`function setUserUseReserveAsCollateral(address asset, bool useAsCollateral)`**
 
@@ -102,7 +102,7 @@ Sets the `asset` of `msg.sender` to be used as collateral or not.
 | `asset`           | address | address of the [underlying asset](../../deployed-contracts/deployed-contracts.md#supported-assets) |
 | `useAsCollateral` | bool    | `true` if the `asset` should be used as collateral                                                 |
 
-### liquidationCall**()**
+### **liquidationCall()**
 
 **`function liquidationCall(address collateral, address debt, address user, uint256 debtToCover, bool receiveAToken)`**
 
@@ -160,7 +160,7 @@ Your contract which receives the flash loaned amounts **must** conform to the [`
 
 ## View Methods
 
-### getReserveData**()**
+### **getReserveData()**
 
 **`function getReserveData(address asset)`**
 
