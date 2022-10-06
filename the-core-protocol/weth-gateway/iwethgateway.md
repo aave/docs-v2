@@ -5,8 +5,9 @@ Also available on [Github](https://github.com/aave/protocol-v2/blob/master/contr
 {% tabs %}
 {% tab title="IWETHGateway.sol" %}
 ```javascript
+
 // SPDX-License-Identifier: agpl-3.0
-pragma solidity 0.8.10;
+pragma solidity 0.6.12;
 
 interface IWETHGateway {
   function depositETH(
