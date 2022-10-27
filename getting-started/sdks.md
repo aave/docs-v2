@@ -66,7 +66,7 @@ To calculate correct historically archived deposit rates you should use [index b
 
 ```javascript
 /*
-You can fetch the data rquired from graphql.
+You can fetch the data required from graphql.
 This query would provide the mot up to date & the first ever data.
 This data could be used to calculate the average liquidityRate since inception.
 {
