@@ -75,7 +75,7 @@ import "./ILendingPool.sol";
 
 contract Liquidator {
 
-    address constant lendingPoolAddressProvider = INSERT_LENDING_POOL_ADDRESS
+    address constant lendingPoolAddressProvider = INSERT_LENDING_POOL_ADDRESS_PROVIDER
 
     function myLiquidationFunction(
         address _collateral, 
