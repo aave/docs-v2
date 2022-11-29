@@ -19,9 +19,9 @@ If you need development support,  join the #developers channel on the [Aave comm
 Deposits a certain `amount` of an `asset` into the protocol, minting the same `amount` of corresponding aTokens, and transferring them to the `onBehalfOf` address.
 
 {% hint style="danger" %}
-The referral program is currently in active and you can pass`0` as the`referralCode.`
+The referral program is currently inactive and you can pass`0` as the`referralCode.`
 
-In future for referral code to be active again, a governance proposal, with the list of unique referral codes for various integration must be passed via governance.&#x20;
+In future, for referral code to be active again, a governance proposal, with the list of unique referral codes for various integration must be passed via governance.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
