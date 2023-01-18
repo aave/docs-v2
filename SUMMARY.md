@@ -21,7 +21,8 @@
 * [AAVE Token](the-core-protocol/aave-token.md)
 * [Price Oracle](the-core-protocol/price-oracle/README.md)
   * [IPriceOracle](the-core-protocol/price-oracle/ipriceoracle.md)
-* [WETH Gateway](the-core-protocol/weth-gateway.md)
+* [WETH Gateway](the-core-protocol/weth-gateway/README.md)
+  * [IWETHGateway](the-core-protocol/weth-gateway/iwethgateway.md)
 
 ## Protocol Governance
 
